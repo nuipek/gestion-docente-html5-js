@@ -74,7 +74,7 @@
                     </section>
                     <section id="contact">
                         <header><h2>Formulario de Contacto</h2></header>
-                        <form onsubmit="return validarFormularioContacto()" id="contactForm" action="#" method="post">
+                        <form id="contactForm" action="#" method="post">
                             <div>
                                 <label for="nombre">Nombre</label>
                                 <input required type="text" name="nombre" id="nombre"/>
@@ -83,14 +83,18 @@
                             <div>
                                 <label for="apellidos">Apellidos</label>
                                 <input required type="text" name="apellidos" id="apellidos"/>
+                                <div class="text-error"></div>
+
                             </div>
                             <div>
                                 <label for="dni">DNI:</label>
                                 <input required type="text" name="dni" id="dni"/>
+                                <div class="text-error"></div>
                             </div>
                             <div>
                                 <label for="telefono">Telefono:</label>
                                 <input type="number" name="telefono" id="telefono"/>
+                                <div class="text-error"></div>
                             </div>
                             <input type="submit" value="Enviar"/>
                         </form>
