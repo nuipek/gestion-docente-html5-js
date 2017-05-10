@@ -1,3 +1,4 @@
+var alumnos = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 $.noConflict();
 jQuery(document).ready(function($) {
     // Code that uses jQuery's $ can follow here.
@@ -40,6 +41,23 @@ jQuery(document).ready(function($) {
             //text y html
         }
         return false;
+    }
+    cargarArrayAlumnos();
+    function cargarArrayAlumnos() {
+        //recorrer el array
+        if (alumnos.length > 0) {
+            for (var a in alumnos) {
+                console.log(a);
+                var texto = "<tr><td><input type='checkbox' value='" + a + "'></td><td></td><td></td><td></td><td></td><td></td></tr>";
+                //añadir el html correspondiente a la página
+                $("#tablaAlumnos tbody").append(texto);
+                //-->
+            }
+            $("#tablaAlumnos tfoot td").html("<span class='text-error'>Total alumnos:"+alumnos.length,10+"</span>");
+        }else{
+            $("#tablaAlumnos").remove();
+            $("#listadoAlumnos").text("No se han encontrado alumnos")
+        }
     }
 });
 function validarNombre(nombre){
