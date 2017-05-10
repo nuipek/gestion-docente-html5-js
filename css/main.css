@@ -285,8 +285,8 @@ ul li a:hover + .submenu, .submenu:hover {
 }
 
 /*Hide checkbox*/
-input[type=checkbox]{
-    /*display: none;*/
+nav input[type=checkbox]{
+    display: none;
 }
 input[type=checkbox]{
     display: block;
