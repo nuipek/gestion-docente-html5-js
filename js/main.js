@@ -10,13 +10,13 @@ jQuery(document).ready(function($) {
         //evaluarlos
         var enviado= validarDni(pdni); //en funcion de si estan bien o mal o se envia o no
         if(enviado){
-            $("#contactForm").submit();//se envia el Formulario(Consumir REST)
+           // $("#contactForm").submit();//se envia el Formulario(Consumir REST)
         }else {
             //mostar mensaje de error
             $("#dni").siblings("div.text-error").text("El DNI esta mal formado");
             //text y html
         }
-        return false;
+        return enviado;
     }
 });
 
