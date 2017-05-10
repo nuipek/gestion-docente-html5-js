@@ -152,7 +152,7 @@ input:not([type='checkbox']),  textarea{
     flex-wrap: wrap;
     flex-direction: column;
 }
-#contactForm .flexcontainer{
+form .flexcontainer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -184,6 +184,10 @@ form button{
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
+}
+form .flexcontainer:last-child {
+    justify-content: flex-start;
+    margin-left: 200px;
 }
 /******* MENU *******/
 /*Strip the ul of padding and list styling*/
