@@ -69,7 +69,35 @@
                     <h1>Aplicación de Gestion de Cursos</h1>
                 </header>
                 <main id ="page-body">
-                    Bienvenido a la aplicación de Ipartek para la gestión de Cursos.
+
+                    <section id=home">
+                        <header><h2>Bienvenido</h2></header>
+                        <div>Bienvenido a la aplicación de Ipartek para la gestión de Cursos.</div>
+                    </section>
+                    <section id="contact">
+                        <form  id="contactForm" action="#" method="post">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input required type="text" name="nombre" id="nombre"/>
+                            </div>
+                            <div>
+                                <label for="apellidos">Apellidos</label>
+                                <input required type="text" name="apellidos" id="apellidos"/>
+                            </div>
+                            <div>
+                                <label for="dni">DNI</label>
+                                <input required type="text" name="dni" id="dni"/>
+                                <div class="text-error"></div>
+                            </div>
+                            <div>
+                                <label for="telefono">Telefono</label>
+                                <input type="text" name="telefono" id="telefono"/>
+                            </div>
+                            <div>
+                                <input type="submit" value="Enviar"/>
+                            </div>
+                         </form>
+                    </section>
                 </main>
                 <footer id="page-footer">
                     <a href="http://formacion.ipartek.com" target="_blank">Ipartek S. Coop.</a>
