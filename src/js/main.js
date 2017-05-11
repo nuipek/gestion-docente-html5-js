@@ -1,5 +1,6 @@
 //codigo, nombre, apellidos, dni, email, telefono
-var alumnos = [{"codigo":1,"nombre":"sergio","apellidos":"aparicio vegas","dni":"44974398z","email":"xxxxx@xxx.xx","telefono":"+3494"},
+var alumnos = [
+    {"codigo":1,"nombre":"sergio","apellidos":"aparicio vegas","dni":"44974398z","email":"xxxxx@xxx.xx","telefono":"+3494"},
     {"codigo":2,"nombre":"maite","apellidos":"monasterio herrero","dni":"16071559x","email":"xxxxx@xxx.xx","telefono":"+3494"},
     {"codigo":3,"nombre":"jorge","apellidos":"manso rodriguez","dni":"16412750e","email":"xxxxx@xxx.xx","telefono":"+3494"}
     ];
@@ -67,8 +68,15 @@ jQuery(document).ready(function($) {
         if (alumnos.length > 0) {
             for(var i = 0; i < alumnos.length; i++) {
                 console.log(alumnos[i]);
-                var codigo = alumnos[i];
-                var texto = "<tr><td><input type='checkbox' value='" + codigo + "'></td><td></td><td></td><td></td><td></td><td></td></tr>";
+                var codigo = alumnos[i].codigo;
+                var nombre = alumnos[i].nombre;
+                var apellidos = alumnos[i].apellidos;
+                var email = alumnos[i].email;
+                var dni = alumnos[i].dni;
+                var htmlEdit ="<button>Editar</button>";
+                var htmlDelete ="<button>Borrar</button>";
+
+                var texto = "<tr><td><input type='checkbox' value='" + codigo + "'></td><td>"+nombre+"</td><td>"+apellidos+"</td><td>"+dni+"</td><td>"+email+"</td><td>"+htmlEdit+htmlDelete+"</td></tr>";
                 //añadir el html correspondiente a la página
                 $("#tablaAlumnos tbody").append(texto);
                 //-->
