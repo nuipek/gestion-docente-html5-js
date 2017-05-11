@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="dist/css/styles-min.css">
+    <link rel="stylesheet" href="../dist/css/styles-min.css">
     <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -72,28 +72,29 @@
             <a title="Borrar" href="#">Borrar Alumno(s)</a>
             <section id="listadoAlumnos">
                 <header><h2>Listado de Alumnos</h2></header>
-                <table id="tablaAlumnos">
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox" name="borrartodos" id="borrartodos"/></th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>DNI</th>
-                            <th>Email</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="flexcontainer">
+                    <table id="tablaAlumnos" class="rwd-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" name="borrartodos" id="borrartodos"/></th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>DNI</th>
+                                <th>Email</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6"></td>
-                        </tr>
-                    </tfoot>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                            </tr>
+                        </tfoot>
 
-                </table>
-
+                    </table>
+                </div>
             </section>
         </main>
         <footer id="page-footer">
@@ -101,6 +102,6 @@
         </footer>
     </div>
 </div>
-<script src="dist/js/all-min.js"></script>
+<script src="../dist/js/all-min.js"></script>
 </body>
 </html>
