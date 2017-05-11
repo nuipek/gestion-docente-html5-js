@@ -1,8 +1,22 @@
-var alumnos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+//var alumnos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];codigo,nombre,apellidos, dni,email,telefono
+var alumnos=[
+             {"codigo":1,"nombre":"sergio","apellidos":"aparicio vegas","dni":"xxxxxx","email":"xxxx@.com","telefono":"607519862"},
+             {"codigo":2,"nombre":"maite","apellidos":"monasterio herrero","dni":"xxxxxx","email":"xxxx@.com","telefono":"xxxxxxx"},
+             {"codigo":3,"nombre":"jorge","apellidos":"manso rodriguez","dni":"xxxxxx","email":"xxxx@.com","telefono":"xxxxxxx"}
+            ];
+
 $.noConflict();
 jQuery(document).ready(function($) {
     // Code that uses jQuery's $ can follow here.
     $("#contactForm").on("submit",validarFormularioContacto);
+    $("#tablaAlumnos tbody").on("click","td:last-child button:last-child",function(event){
+        alert("has pulsado el boton de borrar");
+
+    });
+    $("#tablaAlumnos tbody").on("click","td:last-child button:first-child",function(event){
+        alert("has pulsado el boton de editar");
+
+    });
     $("#borrartodos").click(function (event) {
         //attr ---> cambios de atributos
         // prop --> propiedades
@@ -19,6 +33,7 @@ jQuery(document).ready(function($) {
 
 
     });
+    cargarArrayAlumnos();
 
     function validarFormularioContacto(){
         //recoger los valores de la vista
@@ -57,13 +72,21 @@ jQuery(document).ready(function($) {
         }
         return false;
     }
-    cargarArrayAlumnos();
+
     function cargarArrayAlumnos() {
         //recorrer el array
         if (alumnos.length > 0) {
-            for (var a in alumnos) {
-                console.log(a);
-                var texto = "<tr><td><input type='checkbox' value='" + a + "'></td><td></td><td></td><td></td><td></td><td></td></tr>";
+            for (i=0;i<alumnos.length;i++) {
+                console.log(alumnos[i]);
+                var codigo = alumnos[i].codigo;
+                var nombre = alumnos[i].nombre;
+                var apellidos = alumnos[i].apellidos;
+                var email = alumnos[i].email;
+                var telefono = alumnos[i].telefono;
+                var dni = alumnos[i].dni;
+                var htmlEdit ="<button>Editar</button>";
+                var htmlDelete ="<button>Borrar</button>";
+                var texto = "<tr><td><input type='checkbox' value='" + codigo + "'></td><td>" + nombre + "</td><td>" + apellidos + "</td><td>" + email + "</td><td>" + dni + "</td><td>" + htmlEdit + htmlDelete + "</td></tr>";
                 //añadir el html correspondiente a la página
                 $("#tablaAlumnos tbody").append(texto);
                 //-->
