@@ -1,22 +1,20 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Gestión docente Ipartek</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="dist/css/styles-min.css">
+        <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <nav>
-            <label for="show-menu" class="show-menu">Show Menu</label>
+            <label for="show-menu" class="show-menu">Mostrar Menú</label>
             <input type="checkbox" id="show-menu" role="button">
             <ul id="menu">
                 <li><a href="index.html">Principal</a></li>
@@ -24,79 +22,67 @@
                     <a href="#">Cursos ￬</a>
                     <ul class="submenu">
                         <li><a href="cursos/cursos.html">Listado Cursos</a></li>
-                        <!--
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Illustration</a></li>
-                        -->
                     </ul>
                 </li>
                 <li>
                     <a href="#">Alumnos ￬</a>
                     <ul class="submenu">
-                        <li><a href="alumnos/alumnos.html">Listado Alumnos</a></li>
-                        <!--
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Illustration</a></li>
-                        -->
+                        <li><a href="alumnos/alumnos.html">L. Alumnos</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Profesores ￬</a>
                     <ul class="submenu">
-                        <li><a href="profesores/profesores.html">Listado Profesores</a></li>
-                        <!--
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Illustration</a></li>
-                        -->
+                        <li><a href="profesores/profesores.html">L. Profesores</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Clientes ￬</a>
                     <ul class="submenu">
-                        <li><a href="clientes/clientes.html">Listado Clientes</a></li>
-                        <!--
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Illustration</a></li>
-                        -->
+                        <li><a href="clientes/clientes.html">L. Clientes</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div id="wrapper">
-
             <div id="page">
                 <header id="page-header">
-                    <h1>Aplicación de Gestion de Cursos</h1>
+                    <h1>Aplicación de Gestión de Cursos</h1>
                 </header>
-                <main id ="page-body">
-
-                    <section id=home">
+                <main id="page-body">
+                    <section id="home">
                         <header><h2>Bienvenido</h2></header>
                         <div>Bienvenido a la aplicación de Ipartek para la gestión de Cursos.</div>
                     </section>
-                    <section id="contact">
-                        <form  id="contactForm" action="#" method="post">
-                            <div>
+                    <section class="flexcontainer"  id="contact">
+                        <header><h2>Formulario de Contacto</h2></header>
+                       <div class="flexcontainer">
+                        <form class="flexcontainer" id="contactForm" action="#" method="post">
+                            <div class="flexcontainer">
                                 <label for="nombre">Nombre</label>
-                                <input required type="text" name="nombre" id="nombre"/>
-                            </div>
-                            <div>
-                                <label for="apellidos">Apellidos</label>
-                                <input required type="text" name="apellidos" id="apellidos"/>
-                            </div>
-                            <div>
-                                <label for="dni">DNI</label>
-                                <input required type="text" name="dni" id="dni"/>
+                                <input type="text" name="nombre" id="nombre"/>
                                 <div class="text-error"></div>
                             </div>
-                            <div>
-                                <label for="telefono">Telefono</label>
+                            <div class="flexcontainer">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" name="apellidos" id="apellidos"/>
+                                <div class="text-error"></div>
+                            </div>
+                            <div class="flexcontainer">
+                                <label for="dni">DNI:</label>
+                                <input type="text" name="dni" id="dni"/>
+                                <div class="text-error"></div>
+                            </div>
+                            <div class="flexcontainer">
+                                <label for="telefono">Telefono:</label>
                                 <input type="text" name="telefono" id="telefono"/>
+                                <div class="text-error"></div>
                             </div>
-                            <div>
-                                <input type="submit" value="Enviar"/>
-                            </div>
-                         </form>
+                          <div class="flexcontainer">
+                              <button class="">Enviar</button>
+                          </div>
+                        </form>
+                       </div>
                     </section>
                 </main>
                 <footer id="page-footer">
@@ -104,9 +90,6 @@
                 </footer>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="dist/js/all-min.js"></script>
     </body>
 </html>
