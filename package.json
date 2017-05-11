@@ -1,0 +1,40 @@
+{
+  "name": "gestion-docente",
+  "version": "1.0.0",
+  "description": "Son las vistas del proyecto gestion-docente de Java con tecnologias HTML5, CSS3 y JavaScript 6.",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-babili": "^0.0.12",
+    "babel-preset-env": "^1.4.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-babili": "^0.0.2",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesarrolloWebJava/gestion-docente-html5-js.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "AJAX."
+  ],
+  "author": "Urko Villanueva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DesarrolloWebJava/gestion-docente-html5-js/issues"
+  },
+  "homepage": "https://github.com/DesarrolloWebJava/gestion-docente-html5-js#readme"
+}
