@@ -1,5 +1,5 @@
 {
-  "name": "gestion-docente",
+  "name": "gestion-docente-html5",
   "version": "1.0.0",
   "description": "Son las vistas del proyecto gestion-docente de Java con tecnologias HTML5, CSS3 y JavaScript 6.",
   "main": "gulpfile.js",
