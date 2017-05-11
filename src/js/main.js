@@ -1,4 +1,8 @@
-var alumnos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+//codigo, nombre, apellidos, dni, email, telefono
+var alumnos = [{"codigo":1,"nombre":"sergio","apellidos":"aparicio vegas","dni":"44974398z","email":"xxxxx@xxx.xx","telefono":"+3494"},
+    {"codigo":2,"nombre":"maite","apellidos":"monasterio herrero","dni":"16071559x","email":"xxxxx@xxx.xx","telefono":"+3494"},
+    {"codigo":3,"nombre":"jorge","apellidos":"manso rodriguez","dni":"16412750e","email":"xxxxx@xxx.xx","telefono":"+3494"}
+    ];
 $.noConflict();
 jQuery(document).ready(function($) {
     // Code that uses jQuery's $ can follow here.
@@ -61,9 +65,10 @@ jQuery(document).ready(function($) {
     function cargarArrayAlumnos() {
         //recorrer el array
         if (alumnos.length > 0) {
-            for (var a in alumnos) {
-                console.log(a);
-                var texto = "<tr><td><input type='checkbox' value='" + a + "'></td><td></td><td></td><td></td><td></td><td></td></tr>";
+            for(var i = 0; i < alumnos.length; i++) {
+                console.log(alumnos[i]);
+                var codigo = alumnos[i];
+                var texto = "<tr><td><input type='checkbox' value='" + codigo + "'></td><td></td><td></td><td></td><td></td><td></td></tr>";
                 //añadir el html correspondiente a la página
                 $("#tablaAlumnos tbody").append(texto);
                 //-->
