@@ -17,7 +17,16 @@
     "gulp-util": "^3.0.8",
     "through2": "^2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.1.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,7 +40,7 @@
     "JavaScript",
     "AJAX."
   ],
-  "author": "Urko Villanueva",
+  "author": "Sergio Aparicio",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DesarrolloWebJava/gestion-docente-html5-js/issues"
